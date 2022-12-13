@@ -50,12 +50,13 @@ def update_the_spreadsheet(spreadsheetname,dataframe):
     spread.df_to_sheet(dataframe[col],sheet = spreadsheetname,index = False)
 
 def main():
-    selected = option_menu(
-        menu_title=None,
-        options=['Home', 'Puja list', 'Chat with Priest', 'Chat with the Chef'],
-        icons=['house-door-fill','list', 'chat-dots-fill','chat-dots'],
-        menu_icon='cast',
-        orientation='horizontal'
+    with st.sidebar:
+        selected = option_menu(
+            menu_title=None,
+            options=['Home', 'Puja list', 'Chat with Priest', 'Chat with the Chef'],
+            icons=['house-door-fill','list', 'chat-dots-fill','chat-dots'],
+            menu_icon='cast',
+            orientation='horizontal'
     )
     # Home code
     if selected == 'Home':
