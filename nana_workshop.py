@@ -76,6 +76,7 @@ def main():
     # Puja list code
     if selected == 'Puja list':
         st.title("puja")
+        st.image(puja_icon1)
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
