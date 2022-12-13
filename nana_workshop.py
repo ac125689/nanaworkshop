@@ -8,14 +8,14 @@ from PIL import Image
 image1 = Image.open('image/10977.jpg')
 image2 = Image.open('image/QR1.jpeg')
 image3 = Image.open('image/QR2.jpeg')
-#hide_st_style = """
-#            <style>
+hide_st_style = """
+            <style>
             #MainMenu {visibility: hidden;}
-#            footer {visibility: hidden;}
-#            header {visibility: hidden;}
-#            </style>
-#            """
-#st.markdown(hide_st_style, unsafe_allow_html=True)
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 # Create a connection object.
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
