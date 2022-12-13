@@ -3,6 +3,7 @@ from pandas import DataFrame
 from google.oauth2 import service_account
 from gspread_pandas import Spread,Client
 from streamlit_option_menu import option_menu
+from PIL import Image
 
 hide_st_style = """
             <style>
