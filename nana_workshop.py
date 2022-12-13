@@ -8,7 +8,7 @@ from PIL import Image
 image1 = Image.open('image/10977.jpg')
 image2 = Image.open('image/QR1.jpeg')
 image3 = Image.open('image/QR2.jpeg')
-image4 = Image.open('image/download.jpeg')
+image4 = Image.open('image/logo.jpeg')
 st.set_page_config(
     page_title='Sri Prasanna Venkateswara',
     page_icon= image4)
