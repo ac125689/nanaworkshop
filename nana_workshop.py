@@ -5,6 +5,9 @@ from gspread_pandas import Spread,Client
 from streamlit_option_menu import option_menu
 from PIL import Image
 
+image1 = Image.open('10977.jpg')
+image2 = Image.open('QR1.jpeg')
+
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -49,13 +52,20 @@ def update_the_spreadsheet(spreadsheetname,dataframe):
 def main():
     selected = option_menu(
         menu_title=None,
-        options=['Home', 'Puja list'],
-        icons=['house-door-fill','list'],
+        options=['Home', 'Puja list', 'Chat with Priest'],
+        icons=['house-door-fill','list', 'chat-dots-fill'],
         menu_icon='cast',
         orientation='horizontal'
     )
     if selected == 'Home':
         st.title('Home')
+        col1, col2 = st.columns(2)
+        with col1:
+            st.image(image1)
+        with col2:
+            st.header('Summary')
+            st.write("""We are Sir Prassana Venkateswara Priest and Food services. For priest service we only server for New Jersey, New York, Pennsylvania.
+             If you want us outside these states you have to pay for travles. For food service oder one week before.""") 
 
 if __name__ == "__main__":
   main()
