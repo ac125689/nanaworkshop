@@ -17,6 +17,10 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 # Create a connection object.
+st.set_page_config(
+    page_title='Sir Prassana Venkateswara services',
+    page_icon= '🙏🏽'
+)
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
