@@ -5,8 +5,8 @@ from gspread_pandas import Spread,Client
 from streamlit_option_menu import option_menu
 from PIL import Image
 
-image1 = Image.open('10977.jpg')
-image2 = Image.open('QR1.jpeg')
+image1 = Image.open('image/10977.jpg')
+image2 = Image.open('image/QR1.jpeg')
 
 hide_st_style = """
             <style>
