@@ -23,7 +23,7 @@ scope = ['https://spreadsheets.google.com/feeds',
 credentials = service_account.Credentials.from_service_account_info(
                 st.secrets["gcp_service_account"], scopes = scope)
 client = Client(scope=scope,creds=credentials)
-spreadsheetname = "pujalu"
+spreadsheetname = "Pujalu"
 spread = Spread(spreadsheetname,client = client)
 # Perform SQL query on the Google Sheet.
 # Uses st.cache to only rerun when the query changes or after 10 min.
@@ -48,11 +48,13 @@ def update_the_spreadsheet(spreadsheetname,dataframe):
 def main():
     selected = option_menu(
         menu_title=None,
-        options=['Home', 'Puja list']
+        options=['Home', 'Puja list'],
+        icons=['house-door-fill','list'],
+        menu_icon='cast',
+        orientation='horizontal'
     )
     if selected == 'Home':
         st.title('Home')
-    st.title("Home page")
 
 if __name__ == "__main__":
   main()
