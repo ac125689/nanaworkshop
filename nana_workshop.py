@@ -55,7 +55,8 @@ def main():
             menu_title=None,
             options=['Home', 'Puja list', 'Chat with Priest', 'Chat with the Chef'],
             icons=['house-door-fill','list', 'chat-dots-fill','chat-dots'],
-            menu_icon='cast'
+            menu_icon='cast',
+            default_index=0
     )
     # Home code
     if selected == 'Home':
