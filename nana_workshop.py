@@ -46,6 +46,12 @@ def update_the_spreadsheet(spreadsheetname,dataframe):
     spread.df_to_sheet(dataframe[col],sheet = spreadsheetname,index = False)
 
 def main():
+    selected = option_menu(
+        menu_title=None,
+        options=['Home', 'Puja list']
+    )
+    if selected == 'Home':
+        st.title('Home')
     st.title("Home page")
 
 if __name__ == "__main__":
