@@ -6,9 +6,8 @@ from streamlit_option_menu import option_menu
 from PIL import Image
 
 st.set_page_config(
-    page_title='Sir Prassana Venkateswara services',
-    page_icon= '🙏🏽'
-)
+    page_title='Sri Prasanna Venkateswara',
+    page_icon= '🙏🏽')
 
 image1 = Image.open('image/10977.jpg')
 image2 = Image.open('image/QR1.jpeg')
@@ -71,7 +70,7 @@ def main():
             st.image(image1)
         with col2:
             st.header('Summary')
-            st.write("""We are Sir Prassana Venkateswara Priest and Food services. For priest service we only server for New Jersey, New York, Pennsylvania.
+            st.write("""We are Sri Prasanna Venkateswara Priest and Food services. For priest service we only server for New Jersey, New York, Pennsylvania.
              If you want us outside these states you have to pay for travles. For food service oder one week before.""") 
     # Puja list code
     if selected == 'Puja list':
