@@ -5,13 +5,13 @@ from gspread_pandas import Spread,Client
 from streamlit_option_menu import option_menu
 from PIL import Image
 
-st.set_page_config(
-    page_title='Sri Prasanna Venkateswara',
-    page_icon= '🙏🏽')
-
 image1 = Image.open('image/10977.jpg')
 image2 = Image.open('image/QR1.jpeg')
 image3 = Image.open('image/QR2.jpeg')
+image4 = Image.open('image/download.jpeg')
+st.set_page_config(
+    page_title='Sri Prasanna Venkateswara',
+    page_icon= image4)
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
