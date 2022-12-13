@@ -7,7 +7,7 @@ from PIL import Image
 
 image1 = Image.open('image/10977.jpg')
 image2 = Image.open('image/QR1.jpeg')
-
+image3 = Image.open('image/QR2.jpeg')
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -52,8 +52,8 @@ def update_the_spreadsheet(spreadsheetname,dataframe):
 def main():
     selected = option_menu(
         menu_title=None,
-        options=['Home', 'Puja list', 'Chat with Priest'],
-        icons=['house-door-fill','list', 'chat-dots-fill'],
+        options=['Home', 'Puja list', 'Chat with Priest', 'Chat with the Chef'],
+        icons=['house-door-fill','list', 'chat-dots-fill','chat-dots'],
         menu_icon='cast',
         orientation='horizontal'
     )
@@ -75,7 +75,12 @@ def main():
         st.title('QR code')
         st.write('Scan the QR code to chat with priest')
         st.image(image2)
-    # Don't mess with the Chat with Priest code.
+    # Chat with the Chef code
+    if selected == 'Chat with the Chef':
+        st.title('QR code')
+        st.write('Scan the QR code to chat with the Chef')
+        st.image(image3)
+    # Don't mess with the Chat with Priest and Chat with the Chef code.
 
 if __name__ == "__main__":
   main()
