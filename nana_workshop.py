@@ -57,6 +57,7 @@ def main():
         menu_icon='cast',
         orientation='horizontal'
     )
+    # Home code
     if selected == 'Home':
         st.title('Home')
         col1, col2 = st.columns(2)
@@ -66,12 +67,15 @@ def main():
             st.header('Summary')
             st.write("""We are Sir Prassana Venkateswara Priest and Food services. For priest service we only server for New Jersey, New York, Pennsylvania.
              If you want us outside these states you have to pay for travles. For food service oder one week before.""") 
+    # Puja list code
     if selected == 'Puja list':
         st.title("puja")
+    # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
         st.write('Scan the QR code to chat with priest')
         st.image(image2)
+    # Don't mess with the Chat with Priest code.
 
 if __name__ == "__main__":
   main()
