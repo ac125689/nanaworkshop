@@ -66,6 +66,12 @@ def main():
             st.header('Summary')
             st.write("""We are Sir Prassana Venkateswara Priest and Food services. For priest service we only server for New Jersey, New York, Pennsylvania.
              If you want us outside these states you have to pay for travles. For food service oder one week before.""") 
+    if selected == 'Puja list':
+        st.title("puja")
+    if selected == 'Chat with Priest':
+        st.title('QR code')
+        st.write('Scan the QR code to chat with priest')
+        st.image(image2)
 
 if __name__ == "__main__":
   main()
