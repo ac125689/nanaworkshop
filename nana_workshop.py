@@ -111,6 +111,27 @@ def main():
                 st.write("Naivedyam (any variety)")
                 st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
                 st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors")
+        with col2_1:
+            st.image(puja_icon("kid-sitting-at-desk.jpeg"))
+            with st.expander('Regular Homam list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Betel leaves & nuts | 30 each")
+                st.write("Flower | 2 Bunches")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Fruits (Any Variety) | 12")
+                st.write("Flower String Mala (Jasmine or any) | 1 Box")
+                st.write("Kalasam | 1")
+                st.write("Towel | 1")
+                st.write("Blouse Piece | 2")
+                st.write("Coconuts | 2")
+                st.write("Rice | 3 lbs")
+                st.write("Coins | $5 (Quarters)")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
+                st.write("Book, Pen, Pencil, Slate, White Chalk, Paper Towels, Scissor Disposable Glasses Spoons One Plate")
+
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
