@@ -80,7 +80,7 @@ def main():
     # Puja Samagri list code
     if selected == 'Puja Samagri list':
         st.title("Puja samagri list")
-        col1_1, col2_1, col3_1 = st.columns(3)
+        col1_1, col2_1= st.columns(2)
         with col1_1:
             st.image(puja_icon('images.jpeg'))
             with st.expander('Regular Homam list'):
