@@ -113,7 +113,7 @@ def main():
                 st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors")
         with col2_1:
             st.image(puja_icon("kid-sitting-at-desk.jpeg"))
-            with st.expander('Regular Homam list'):
+            with st.expander('Aksharabhyasam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
                 st.write("Kumkum           | One small packet")
