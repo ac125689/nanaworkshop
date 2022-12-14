@@ -9,7 +9,10 @@ image1 = Image.open('image/10977.jpg')
 image2 = Image.open('image/QR1.jpeg')
 image3 = Image.open('image/QR2.jpeg')
 image4 = Image.open('image/logo1.jpg')
-puja_icon1 = Image.open('image/puja_icons/images.jpeg')
+def puja_icon(image):
+    y=image
+    x = Image.open('image/puja_icons/' + y)
+    return x
 st.set_page_config(
     page_title='Sri Prasanna Venkateswara',
     page_icon= image4)
@@ -76,7 +79,7 @@ def main():
     # Puja list code
     if selected == 'Puja list':
         st.title("puja")
-        st.image(puja_icon1)
+        st.image(puja_icon('images.jpeg'))
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
