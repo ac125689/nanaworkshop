@@ -61,7 +61,7 @@ def main():
     with st.sidebar:
         selected = option_menu(
             menu_title=None,
-            options=['Home', 'Puja list', 'Chat with Priest', 'Chat with the Chef'],
+            options=['Home', 'Puja Samagri list', 'Chat with Priest', 'Chat with the Chef'],
             icons=['house-door-fill','list', 'chat-dots-fill','chat-dots'],
             menu_icon='cast',
             default_index=0
@@ -76,7 +76,7 @@ def main():
             st.header('Summary')
             st.write("""We are Sri Prasanna Venkateswara Priest and Food services. For priest service we only server for New Jersey, New York, Pennsylvania.
              If you want us outside these states you have to pay for travles. For food service oder one week before.""") 
-    # Puja list code
+    # Puja Samagri list code
     if selected == 'Puja Samagri list':
         st.title("Puja samagri list")
         col1_1, col2_1, col3_1 = st.columns(3)
