@@ -77,9 +77,17 @@ def main():
             st.write("""We are Sri Prasanna Venkateswara Priest and Food services. For priest service we only server for New Jersey, New York, Pennsylvania.
              If you want us outside these states you have to pay for travles. For food service oder one week before.""") 
     # Puja list code
-    if selected == 'Puja list':
-        st.title("puja")
-        st.image(puja_icon('images.jpeg'))
+    if selected == 'Puja Samagri list':
+        st.title("Puja samagri list")
+        col1_1, col2_1, col3_1 = st.columns(3)
+        with col1_1:
+            st.image(puja_icon('images.jpeg'))
+            with st.expander('Regular Homam list'):
+                col1_2, col2_2 = st.columns(2)
+                with col1_2:
+                    st.subheader('Name of the Item')
+                with col2_2:
+                    st.subheader('Quantity')
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
