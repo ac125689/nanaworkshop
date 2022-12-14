@@ -109,11 +109,7 @@ def main():
                 st.write("Steel Bowls | 6")
                 st.write("Banana Leaves | 4")
                 st.write("Naivedyam (any variety)")
-                with st.expander("Deeparadhana Samagri"):
-                    st.write("Deepam | 2")
-                    st.write("Oil | One small bottle")
-                    st.write("Wicks | Keep some close by")
-                    st.write("Match Box | 1")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
                 st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors")
     # Chat with Priest code 
     if selected == 'Chat with Priest':
