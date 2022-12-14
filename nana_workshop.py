@@ -84,8 +84,8 @@ def main():
         with col1_1:
             st.image(puja_icon('images.jpeg'))
             with st.expander('Regular Homam list'):
-                df = pd.DataFrame({"Name of the Item": "0", "Quantity":"0"})
-                st.dataframe(df)
+                st.write("""Name of the item                                Quantity
+                """)
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
