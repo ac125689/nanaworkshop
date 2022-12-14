@@ -85,7 +85,9 @@ def main():
             st.image(puja_icon('images.jpeg'))
             with st.expander('Regular Homam list'):
                 st.write("Name of the item | Quantity")
-                st.write("Turmeric powder | one small packet")
+                st.write("Turmeric powder  | one small packet")
+                st.write("Kumkum           | one small packet")
+                
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
