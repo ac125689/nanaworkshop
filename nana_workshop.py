@@ -4,6 +4,7 @@ from google.oauth2 import service_account
 from gspread_pandas import Spread,Client
 from streamlit_option_menu import option_menu
 from PIL import Image
+import pandas as pd
 
 image1 = Image.open('image/10977.jpg')
 image2 = Image.open('image/QR1.jpeg')
@@ -83,11 +84,8 @@ def main():
         with col1_1:
             st.image(puja_icon('images.jpeg'))
             with st.expander('Regular Homam list'):
-                col1_2, col2_2 = st.columns(2)
-                with col1_2:
-                    st.subheader('Name of the Item')
-                with col2_2:
-                    st.subheader('Quantity')
+                df = pd.DataFrame({"Name of the Item": "0", "Quantity":"0"})
+                st.dataframe(df)
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
