@@ -136,8 +136,8 @@ def main():
                 st.write("Coins | $5 (Quarters)")
                 st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
                 st.write("Book, Pen, Pencil, Slate, White Chalk, Paper Towels, Scissor Disposable Glasses Spoons One Plate")
-                st.download_button(
-                    label="Download the list",
+            st.download_button(
+                    label="Download the list above",
                     file_name= puja_list_download("Aksharabhyasam list.csv"),
                     mime='text/csv'
                 )
