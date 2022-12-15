@@ -114,7 +114,7 @@ def main():
                 st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors")
                 st.download_button(
                     label="Download the list above",
-                    data='Regular Homam list.csv',
+                    data=open('Regular Homam list.csv'),
                     file_name= "Regular Homam list.csv",
                     mime='text/csv'
                 )    
@@ -140,7 +140,7 @@ def main():
                 st.write("Book, Pen, Pencil, Slate, White Chalk, Paper Towels, Scissor Disposable Glasses Spoons One Plate")
                 st.download_button(
                     label="Download the list above",
-                    data='Aksharabhyasam_list.csv',
+                    data=open('Aksharabhyasam_list.csv'),
                     file_name= "Aksharabhyasam_list.csv",
                     mime='text/csv'
                 )
