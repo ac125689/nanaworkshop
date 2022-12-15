@@ -116,7 +116,7 @@ def main():
                 st.write("Naivedyam (any variety)")
                 st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
                 st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors")
-            st.download_button(
+                st.download_button(
                     label="Download the list above",
                     data=puja_list_download("Regular Homam list.csv"),
                     file_name= "Regular Homam list.csv",
@@ -142,7 +142,7 @@ def main():
                 st.write("Coins | $5 (Quarters)")
                 st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
                 st.write("Book, Pen, Pencil, Slate, White Chalk, Paper Towels, Scissor Disposable Glasses Spoons One Plate")
-            st.download_button(
+                st.download_button(
                     label="Download the list above",
                     data=puja_list_download("Aksharabhyasam_list.csv"),
                     file_name= "Aksharabhyasam_list.csv",
