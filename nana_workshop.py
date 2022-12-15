@@ -14,6 +14,10 @@ def puja_icon(image):
     y=image
     x = Image.open('image/puja_icons/' + y)
     return x
+def puja_list_download(name):
+    y =name
+    x = 'puja_list_downloads/'+y
+    return x
 st.set_page_config(
     page_title='Sri Prasanna Venkateswara',
     page_icon= image4)
@@ -97,7 +101,7 @@ def main():
                 st.write("Aluminium trays | 3 Large size")
                 st.write("Ghee | One small bottle")
                 st.write("Navadhanyas | Small Packets Seperately")
-                st.write("Yellow Mustard Seeds (Vastu Homam) | One small packet)")
+                st.write("Yellow Mustard Seeds (Vastu Homam) | One small packet")
                 st.write("Dry Coconut Pieces (Copra) | 6")
                 st.write("Sand | 5 lbs")
                 st.write("Kalasam | 1")
@@ -111,6 +115,7 @@ def main():
                 st.write("Naivedyam (any variety)")
                 st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
                 st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors")
+                
         with col2_1:
             st.image(puja_icon("kid-sitting-at-desk.jpeg"))
             with st.expander('Aksharabhyasam list'):
@@ -131,7 +136,12 @@ def main():
                 st.write("Coins | $5 (Quarters)")
                 st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
                 st.write("Book, Pen, Pencil, Slate, White Chalk, Paper Towels, Scissor Disposable Glasses Spoons One Plate")
-
+                st.download_button(
+                    label="Download the list",
+                    data=csv,
+                    file_name= puja_list_download("Aksharabhyasam list.csv"),
+                    mime='text/csv'
+                )
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
