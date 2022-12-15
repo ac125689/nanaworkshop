@@ -137,10 +137,10 @@ def main():
                 st.write("Coins | $5 (Quarters)")
                 st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
                 st.write("Book, Pen, Pencil, Slate, White Chalk, Paper Towels, Scissor Disposable Glasses Spoons One Plate")
-                btn2 = st.download_button(
+                st.download_button(
                     label="Download the list",
-                    data=file,
-                    file_name= puja_list_download("Aksharabhyasam_list.csv"),
+                    data=puja_list_download("Aksharabhyasam_list.csv"),
+                    file_name= "Aksharabhyasam_list.csv",
                     mime='text/csv'
                 )
     # Chat with Priest code 
