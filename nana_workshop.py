@@ -139,7 +139,9 @@ def main():
     if selected == 'Puja samagri list Downloads':
         st.download_button(
                     label="Download Regular Homam list",
-                    file_name= puja_list_download("Regular Homam list.csv")
+                    data=csv,
+                    file_name= puja_list_download("Regular Homam list.csv"),
+                    mime='text/csv'
                 )
         st.download_button(
                     label="Download Aksharabhyasam list",
