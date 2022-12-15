@@ -66,8 +66,8 @@ def main():
     with st.sidebar:
         selected = option_menu(
             menu_title=None,
-            options=['Home', 'Puja Samagri list', 'Chat with Priest', 'Chat with the Chef'],
-            icons=['house-door-fill','list', 'chat-dots-fill','chat-dots'],
+            options=['Home', 'Puja Samagri list', 'Puja samagri list Downloads','Chat with Priest', 'Chat with the Chef'],
+            icons=['house-door-fill','list', 'arrow-down-cricle-fill','chat-dots-fill','chat-dots'],
             menu_icon='cast',
             default_index=0
     )
@@ -136,8 +136,14 @@ def main():
                 st.write("Coins | $5 (Quarters)")
                 st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
                 st.write("Book, Pen, Pencil, Slate, White Chalk, Paper Towels, Scissor Disposable Glasses Spoons One Plate")
-            st.download_button(
-                    label="Download the list above",
+    if selected == 'Puja samagri list Downloads':
+        st.download_button(
+                    label="Download Regular Homam list",
+                    file_name= puja_list_download("Regular Homam list.csv"),
+                    mime='text/csv'
+                )
+        st.download_button(
+                    label="Download Aksharabhyasam list",
                     file_name= puja_list_download("Aksharabhyasam list.csv"),
                     mime='text/csv'
                 )
