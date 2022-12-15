@@ -63,6 +63,7 @@ def update_the_spreadsheet(spreadsheetname,dataframe):
     spread.df_to_sheet(dataframe[col],sheet = spreadsheetname,index = False)
 
 def main():
+    st.cache()
     with st.sidebar:
         selected = option_menu(
             menu_title=None,
