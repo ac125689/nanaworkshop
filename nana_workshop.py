@@ -138,12 +138,12 @@ def main():
                 st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
                 st.write("Book, Pen, Pencil, Slate, White Chalk, Paper Towels, Scissor Disposable Glasses Spoons One Plate")
     if selected == 'Puja samagri list Downloads':
-        st.download_button(
-                    label="Download Regular Homam list",
-                    data=csv,
-                    file_name= puja_list_download("Regular Homam list.csv"),
-                    mime='text/csv'
-                )
+        #st.download_button(
+        #            label="Download Regular Homam list",
+        #            data='csv',
+        #            file_name= puja_list_download("Regular Homam list.csv"),
+        #            mime='text/csv'
+        #        )
         st.download_button(
                     label="Download Aksharabhyasam list",
                     file_name= puja_list_download("Aksharabhyasam_list.csv")
