@@ -11,8 +11,14 @@ image2 = Image.open('image/QR1.jpeg')
 image3 = Image.open('image/QR2.jpeg')
 image4 = Image.open('image/logo1.jpg')
 def puja_icon(image):
-    y=image
-    x = Image.open('image/puja_icons/' + y)
+    x = Image.open('image/puja_icons/' + image)
+    return x
+def resize_image(name, hight, width):
+    x = puja_icon(name)
+    y = x.resize(width,hight)
+    return y
+def puja_list_down(name):
+    x = open('puja_list_downloads/'+name)
     return x
 st.set_page_config(
     page_title='Sri Prasanna Venkateswara',
@@ -114,10 +120,11 @@ def main():
                 st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors")
                 st.download_button(
                     label="Download the list above",
-                    data=open('Regular Homam list.csv'),
+                    data=puja_list_down('Regular Homam list.csv'),
                     file_name= "Regular Homam list.csv",
                     mime='text/csv'
-                )    
+                )
+            st.image(resize_image('engagement-rings.jpeg',219,220))  
         with col2_1:
             st.image(puja_icon("kid-sitting-at-desk.jpeg"))
             with st.expander('Aksharabhyasam list'):
@@ -140,7 +147,7 @@ def main():
                 st.write("Book, Pen, Pencil, Slate, White Chalk, Paper Towels, Scissor Disposable Glasses Spoons One Plate")
                 st.download_button(
                     label="Download the list above",
-                    data=open('Aksharabhyasam_list.csv'),
+                    data=puja_list_down('Aksharabhyasam_list.csv'),
                     file_name= "Aksharabhyasam_list.csv",
                     mime='text/csv'
                 )
