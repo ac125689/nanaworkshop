@@ -143,7 +143,7 @@ def main():
                 )
         st.download_button(
                     label="Download Aksharabhyasam list",
-                    file_name= puja_list_download("Aksharabhyasam list.csv")
+                    file_name= puja_list_download("Aksharabhyasam_list.csv")
                 )
     # Chat with Priest code 
     if selected == 'Chat with Priest':
