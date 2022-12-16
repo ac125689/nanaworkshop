@@ -323,6 +323,8 @@ def main():
                     file_name= "Gruha Pravesam list.csv",
                     mime='text/csv'
                 )
+            st.image(resize_image('kid_shoveling.jpeg',219,272))
+            
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
