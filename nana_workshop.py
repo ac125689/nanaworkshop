@@ -151,6 +151,7 @@ def main():
                     file_name= "Aksharabhyasam_list.csv",
                     mime='text/csv'
                 )
+            st.image(resize_image('Chandi.jpeg',219,154))
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
