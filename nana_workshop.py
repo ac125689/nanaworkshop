@@ -324,7 +324,39 @@ def main():
                     mime='text/csv'
                 )
             st.image(resize_image('kid_shoveling.jpeg',219,272))
-            
+            with st.expander('Ghu puja list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Betel leaves | 15 ")
+                st.write("Betel nuts | 20 ")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Fruits (Any Variety) | 12")
+                st.write("Camphor | One small packet")
+                st.write("Coconuts | 5")
+                st.write("Rice | 2 lbs")
+                st.write("Milk | Small Qty")
+                st.write("Mixed navadhanyams | 1 lb")
+                st.write("Gold, silver, copper, coral, Pagadam | small pieces")
+                st.write("Kalasam | 1")
+                st.write("Vastram for kalasam | 1 towel & blouse piece")
+                st.write("Sweets | 1 packet")
+                st.write("Water | 1 bottle")
+                st.write("Shovel | 1")
+                st.write("Bricks | 9")
+                st.write("Coins | 20")
+                st.write("Nava ratnams")
+                st.write("Flowers")
+                st.write("Deeparadhana samagri (Deepam, oil, wicks, Match box)")
+                st.write("God's photo")
+                st.write("Napkins,tumbler, plate, spoon")
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('Ghu puja list.csv'),
+                    file_name= "Ghu puja list.csv",
+                    mime='text/csv'
+                )
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
