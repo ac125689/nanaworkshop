@@ -101,7 +101,7 @@ def main():
                 st.write("Fruits (Any Variety) | 20")
                 st.write("Flower String Mala (Jasmine or any) | 1 Box")
                 st.write("Camphor | One small packet")
-                st.write("Aluminium trays | 3 Large size")
+                st.write("Aluminium trays | 3 Big size")
                 st.write("Ghee | One small bottle")
                 st.write("Navadhanyas | Small Packets Seperately")
                 st.write("Yellow Mustard Seeds (Vastu Homam) | One small packet")
@@ -124,7 +124,43 @@ def main():
                     file_name= "Regular Homam list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('engagement-rings.jpeg',219,220))  
+            st.image(resize_image('Chandi.jpeg',219,154))
+            with st.expander('Aksharabhyasam list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Betel leaves & nuts | 40 each")
+                st.write("Flower | 3 Bunches")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Fruits (Any Variety) | 20")
+                st.write("Flower String Mala (Jasmine or any) | 1 Box")
+                st.write("Rice | 3 lbs")
+                st.write("Kalasam | 1")
+                st.write("Aluminium trays | 2 Big and small size")
+                st.write("Sand | 5 lbs")
+                st.write("Dry Coconut Pieces (Copra) | 12")
+                st.write("Ghee | 1 lbs")
+                st.write("Honey | One small bottle")
+                st.write("Pomegranate fruits | 2")
+                st.write("Camphor | One small packet")
+                st.write("Small pumpkin | 1")
+                st.write("White betel nuts | One small packet")
+                st.write("Banana | 12")
+                st.write("Guava fruits | 3")
+                st.write("Towel | 1")
+                st.write("Blouse Piece | 1")
+                st.write("Coconuts | 2")
+                st.write("Naivedyam (any variety)")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
+                st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors")
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('Chandi Homam list.csv'),
+                    file_name= "Candi Homam list.csv",
+                    mime='text/csv'
+                )
+
         with col2_1:
             st.image(puja_icon("kid-sitting-at-desk.jpeg"))
             with st.expander('Aksharabhyasam list'):
@@ -148,10 +184,11 @@ def main():
                 st.download_button(
                     label="Download the list above",
                     data=puja_list_down('Aksharabhyasam_list.csv'),
-                    file_name= "Aksharabhyasam_list.csv",
+                    file_name= "Aksharabhyasam list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('Chandi.jpeg',219,154))
+            st.image(resize_image('engagement-rings.jpeg',219,220))
+            
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
