@@ -324,7 +324,7 @@ def main():
                     mime='text/csv'
                 )
             st.image(resize_image('kid_shoveling.jpeg',219,272))
-            with st.expander('Ghu puja list'):
+            with st.expander('Bhu puja list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
                 st.write("Kumkum           | One small packet")
