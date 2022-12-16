@@ -168,7 +168,7 @@ def main():
                 st.write("Turmeric powder  | One small packet")
                 st.write("Kumkum           | One small packet")
                 st.write("Sandalwood powder | One small tin")
-                st.write("Betel leaves & nuts | 30 each")
+                st.write("Betel leaves & nuts | 20 each")
                 st.write("Flower | 2 Bunches")
                 st.write("Incense Sticks (Agarbathi) | 1 Packet")
                 st.write("Fruits (Any Variety) | 12")
@@ -193,7 +193,7 @@ def main():
                 st.write("Turmeric powder  | One small packet")
                 st.write("Kumkum           | One small packet")
                 st.write("Sandalwood powder | One small tin")
-                st.write("Betel leaves & nuts | 30 each")
+                st.write("Betel leaves & nuts | 15 each")
                 st.write("Flower | 2 Bunches")
                 st.write("Incense Sticks (Agarbathi) | 1 Packet")
                 st.write("Fruits (Any Variety) | 12")
@@ -211,6 +211,33 @@ def main():
                     label="Download the list above",
                     data=puja_list_down('Engagement list.csv'),
                     file_name= "Engagement list.csv",
+                    mime='text/csv'
+                )
+            st.image(resize_image('kid_eating.jpeg',219,219))
+            with st.expander('Annaprasana list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Betel leaves & nuts | 20 each")
+                st.write("Flower | 2 Bunches")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Fruits (Any Variety) | 12")
+                st.write("Flower String Mala (Jasmine or any) | 1 Box")
+                st.write("Kalasam | 1")
+                st.write("Towel | 1")
+                st.write("Blouse Piece | 1")
+                st.write("Coconuts | 2")
+                st.write("Rice | 3 lbs")
+                st.write("Coins | $5 (Quarters)")
+                st.write("Naivedyam (any variety)")
+                st.write("Rice Paayasam for Feeding")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
+                st.write('Paper Towels, Scissors,Disposable Glasses,Spoons, One Plate')
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('Annaprasana list.csv'),
+                    file_name= "Annaprasana list.csv",
                     mime='text/csv'
                 )
     # Chat with Priest code 
