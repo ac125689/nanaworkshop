@@ -353,8 +353,8 @@ def main():
                 st.write("Napkins,tumbler, plate, spoon")
                 st.download_button(
                     label="Download the list above",
-                    data=puja_list_down('Ghu puja list.csv'),
-                    file_name= "Ghu puja list.csv",
+                    data=puja_list_down('Bhu puja list.csv'),
+                    file_name= "Bhu puja list.csv",
                     mime='text/csv'
                 )
     # Chat with Priest code 
