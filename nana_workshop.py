@@ -4,7 +4,6 @@ from google.oauth2 import service_account
 from gspread_pandas import Spread,Client
 from streamlit_option_menu import option_menu
 from PIL import Image
-import pandas as pd
 
 image1 = Image.open('image/10977.jpg')
 image2 = Image.open('image/QR1.jpeg')
