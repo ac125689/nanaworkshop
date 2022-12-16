@@ -125,7 +125,7 @@ def main():
                     mime='text/csv'
                 )
             st.image(resize_image('Chandi.jpeg',219,154))
-            with st.expander('Aksharabhyasam list'):
+            with st.expander('Chandi Homam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
                 st.write("Kumkum           | One small packet")
@@ -188,7 +188,31 @@ def main():
                     mime='text/csv'
                 )
             st.image(resize_image('engagement-rings.jpeg',219,220))
-            
+            with st.expander('Engagement list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Betel leaves & nuts | 30 each")
+                st.write("Flower | 2 Bunches")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Fruits (Any Variety) | 12")
+                st.write("Flower String Mala (Jasmine or any) | 1 Box")
+                st.write("Flower Mala | 2")
+                st.write("Coconuts | 2")
+                st.write("Rice | 3 lbs")
+                st.write("Coins | $5 (Quarters)")
+                st.write("Sweets")
+                st.write("New Clothes and Ornaments for Bride and Groom")
+                st.write("White Paper for writing Wedding Card and Pen")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
+                st.write("Book, Pen, Pencil, Slate, White Chalk, Paper Towels, Scissor Disposable Glasses Spoons One Plate")
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('Engagement list.csv'),
+                    file_name= "Engagement list.csv",
+                    mime='text/csv'
+                )
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
