@@ -15,7 +15,7 @@ def puja_icon(image):
     return x
 def resize_image(name, hight, width):
     x = puja_icon(name)
-    y = x.resize(width,hight)
+    y = x.resize((width,hight))
     return y
 def puja_list_down(name):
     x = open('puja_list_downloads/'+name)
