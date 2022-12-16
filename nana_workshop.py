@@ -181,7 +181,7 @@ def main():
                 st.write("Paper Towels, Scissors,Disposable Glasses,Bowl,Spoon")
                 st.download_button(
                     label="Download the list above",
-                    data=puja_list_down('Hair Offering list.csv'),
+                    data=puja_list_down('Hair offering list.csv'),
                     file_name= "Hair Offering list.csv",
                     mime='text/csv'
                 )
