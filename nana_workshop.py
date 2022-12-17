@@ -237,6 +237,22 @@ def main():
                     file_name= "Punyahavachanam list.csv",
                     mime='text/csv'
                 )
+            st.image(puja_icon("food.jpeg"))
+            with st.expander('Hiranya sraddham list'):
+                st.write("Name of the item | Quantity")
+                st.write("Rice | 2 lbs")
+                st.write("Fresh Vegetables | 3 or 5 varieties")
+                st.write("Coins | $5 (Quarters)")
+                st.write("Sesamee seeds | Small Packet")
+                st.write("Dhoti, uttareeyam for wearing")
+                st.write("Paper Towels, Disposable Glasses, Spoons, One Plate")
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('Hiranya sraddham list.csv'),
+                    file_name= "Hiranya sraddham list.csv",
+                    mime='text/csv'
+                )
+            
         with col2_1:
             st.image(puja_icon("kid-sitting-at-desk.jpeg"))
             with st.expander('Aksharabhyasam list'):
@@ -370,7 +386,7 @@ def main():
                 st.write("Water | 1 bottle")
                 st.write("Shovel | 1")
                 st.write("Bricks | 9")
-                st.write("Coins | 20")
+                st.write("Coins | $20(Quarters)")
                 st.write("Nava ratnams")
                 st.write("Flowers")
                 st.write("Deeparadhana samagri (Deepam, oil, wicks, Match box)")
@@ -382,6 +398,37 @@ def main():
                     file_name= "Bhu puja list.csv",
                     mime='text/csv'
                 )
+            st.image(resize_image('satya.jpeg',219,154))
+            with st.expander('Sri Satyanarayana Swami Vratam list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Betel leaves & nuts | 30 each")
+                st.write("Flower | 4 Bunches")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Fruits (Any Variety) | 25")
+                st.write("Flower String Mala (Jasmine or any) | 1 Box")
+                st.write("Navadhanyas | Small Packets Seperately")
+                st.write("Kalasam | 1")
+                st.write("Towel | 1")
+                st.write("Blouse Piece | 1")
+                st.write("Coconuts | 2")
+                st.write("Rice | 3 lbs")
+                st.write("Coins | $10 (Quarters)")
+                st.write("Panchamrutam (Milk, Yogurt, Ghee, Honey, Sugar) | Small Qty")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
+                st.write("Prasadam as per family tradition")
+                st.write("Satyanarayana Swamy Picture")
+                st.write("Small Idol For Abhishekam (Vishnu / Krishna / Satyanarayana Swamy)")
+                st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors")
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('Sri Satyanarayana Swami Vratam list.csv'),
+                    file_name= "Sri Satyanarayana Swami Vratam list.csv",
+                    mime='text/csv'
+                )
+            st.image(resize_image("kalyna.jpeg",219,389))
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
