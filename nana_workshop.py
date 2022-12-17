@@ -252,7 +252,42 @@ def main():
                     file_name= "Hiranya sraddham list.csv",
                     mime='text/csv'
                 )
-            
+            st.image(resize_image('shiva.jpeg',219))
+            with st.expander('Rudrabhishekam list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Betel leaves & nuts | 30 each")
+                st.write("Flower | 2 Bunches")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Fruits (Any Variety) | 20")
+                st.write("Flower String Mala (Jasmine or any) | 1 Box")
+                st.write("Rice | 1 lbs")
+                st.write("Kalasam | 1")
+                st.write("Milk | 3 Gallon")
+                st.write("Yogurt | Small Qty")
+                st.write("Ghee | Small Qty")
+                st.write("Honey | 1 Bottle")
+                st.write("Sugar | Small Qty")
+                st.write("Fruit Juices | Small Qty")
+                st.write("Camphor | One small packet")
+                st.write("Rose Water | 1 Bottle")
+                st.write("Gangajal | Small Bottle")
+                st.write("Coconut Water | Small Bottle")
+                st.write("Steel Big Basin | 1")
+                st.write("Coins | $10 (Quarters)")
+                st.write("White Thread Reel | 1")
+                st.write("Coconuts | 2")
+                st.write("Two Varieties of Prasadam")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
+                st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors")
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('Rudrabhishekam list.csv'),
+                    file_name= "Rudrabhishekam list.csv",
+                    mime='text/csv'
+                )
         with col2_1:
             st.image(puja_icon("kid-sitting-at-desk.jpeg"))
             with st.expander('Aksharabhyasam list'):
@@ -429,6 +464,36 @@ def main():
                     mime='text/csv'
                 )
             st.image(resize_image("kalyna.jpeg",389))
+            with st.expander('Kalyna Utsvam list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Betel leaves & nuts | 20 each")
+                st.write("Flower | 2 Bunches")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Fruits (Any Variety) | 20")
+                st.write("Flower String Mala (Jasmine or any) | 3 Box")
+                st.write("Garlands for Swamy and Ammavaru | 3")
+                st.write("Rice for Talambralu | 4lbs")
+                st.write("Kalasam | 1")
+                st.write("Paste of Jaggery and Jeera | Small Qty")
+                st.write("Milk, Yogurt And Honey | Small Qty")
+                st.write("Towel | 1")
+                st.write("Blouse Piece | 1")
+                st.write("Coins | $10 (Quarters)")
+                st.write("White Thread Reel | 1")
+                st.write("Coconuts | 2")
+                st.write("Two Varieties of Prasadam")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
+                st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors")
+                st.write("Vastram for Swamy and Ammavaru")
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('Kalyna Utsvam list.csv'),
+                    file_name= "Kalyna Utsvam list.csv",
+                    mime='text/csv'
+                )
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
