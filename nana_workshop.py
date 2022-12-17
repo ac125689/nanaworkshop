@@ -288,6 +288,39 @@ def main():
                     file_name= "Rudrabhishekam list.csv",
                     mime='text/csv'
                 )
+            st.image(resize_image("women.jpeg",219,175))
+            with st.expander('Seemantam list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Betel leaves & nuts | 15 each")
+                st.write("Flower | 2 Bunches")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Camphor | One small packet")
+                st.write("Rice | 2 lbs")
+                st.write("Fruits | 12 Bananas and other fruits")
+                st.write("Coconuts | 4")
+                st.write("Ghee | Small Bottle")
+                st.write("Aluminium trays | 1 Big size")
+                st.write("Dry Coconut Pieces (Copra) | 4")
+                st.write("Seemantam saree | 1")
+                st.write("Milk | Small Qty")
+                st.write("Flower garlands | 2")
+                st.write("Coins | $15 (Quarters)")
+                st.write("Vastram for kalasam | 1 towel & blouse piece")
+                st.write("Kalasam | 1")
+                st.write("Homa samagri | 1 Packet")
+                st.write("Cooked rice | 1 Small cup")
+                st.write("Sand | 4 lbs")
+                st.write("Napkins,tumbler, spoon, and plate")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('Seemantam list.csv'),
+                    file_name= "Seemantam list.csv",
+                    mime='text/csv'
+                )
         with col2_1:
             st.image(puja_icon("kid-sitting-at-desk.jpeg"))
             with st.expander('Aksharabhyasam list'):
@@ -494,6 +527,17 @@ def main():
                     file_name= "Kalyna Utsvam list.csv",
                     mime='text/csv'
                 )
+            st.image(resize_image("Birthday.png",219,292))
+            with st.expander('Kalyna Utsvam list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Betel leaves & nuts | 30 each")
+                st.write("Flower | 4 Bunches")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Fruits (Any Variety) | 25")
+                
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
