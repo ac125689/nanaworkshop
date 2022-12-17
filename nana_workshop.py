@@ -88,7 +88,7 @@ def main():
         st.title("Puja samagri list")
         col1_1, col2_1= st.columns(2)
         with col1_1:
-            st.image(puja_icon('images.jpeg'))
+            st.image(resize_image('images.jpeg',219,261))
             with st.expander('Regular Homam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
