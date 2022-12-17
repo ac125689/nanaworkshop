@@ -252,7 +252,7 @@ def main():
                     file_name= "Hiranya sraddham list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('shiva.jpeg',210,210))
+            st.image(resize_image('shiva.jpeg',205,205))
             with st.expander('Rudrabhishekam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
