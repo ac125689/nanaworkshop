@@ -12,9 +12,9 @@ image5 = Image.open('image/logo1.jpg')
 def puja_icon(image):
     x = Image.open('image/puja_icons/' + image)
     return x
-def resize_image(name,width):
+def resize_image(name,hight,width):
     x = puja_icon(name)
-    y = x.resize((width,219))
+    y = x.resize((width,hight))
     return y
 def puja_list_down(name):
     x = open('puja_list_downloads/'+name)
@@ -88,7 +88,7 @@ def main():
         st.title("Puja samagri list")
         col1_1, col2_1= st.columns(2)
         with col1_1:
-            st.image(resize_image('images.jpeg',261))
+            st.image(resize_image('images.jpeg',219,261))
             with st.expander('Regular Homam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -123,7 +123,7 @@ def main():
                     file_name= "Regular Homam list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('Chandi.jpeg',154))
+            st.image(resize_image('Chandi.jpeg',219,154))
             with st.expander('Chandi Homam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -159,7 +159,7 @@ def main():
                     file_name= "Candi Homam list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('hair.jpeg',219))
+            st.image(resize_image('hair.jpeg',219,219))
             with st.expander('Hair offering list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -184,7 +184,7 @@ def main():
                     file_name= "Hair Offering list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image("name_kid.jpeg",206))
+            st.image(resize_image("name_kid.jpeg",219,206))
             with st.expander('Namakaranam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -212,7 +212,7 @@ def main():
                     file_name= "Namakaranam list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image("kalasha.jpeg",292))
+            st.image(resize_image("kalasha.jpeg",219,292))
             with st.expander('Punyahavachanam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -237,7 +237,7 @@ def main():
                     file_name= "Punyahavachanam list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image("food.jpeg",150))
+            st.image(resize_image("food.jpeg",219,150))
             with st.expander('Hiranya sraddham list'):
                 st.write("Name of the item | Quantity")
                 st.write("Rice | 2 lbs")
@@ -252,7 +252,7 @@ def main():
                     file_name= "Hiranya sraddham list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('shiva.jpeg',219))
+            st.image(resize_image('shiva.jpeg',219,219))
             with st.expander('Rudrabhishekam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -314,7 +314,7 @@ def main():
                     file_name= "Aksharabhyasam list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('engagement-rings.jpeg',220))
+            st.image(resize_image('engagement-rings.jpeg',219,220))
             with st.expander('Engagement list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -340,7 +340,7 @@ def main():
                     file_name= "Engagement list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('kid_eating.jpeg',219))
+            st.image(resize_image('kid_eating.jpeg',219,219))
             with st.expander('Annaprasana list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -367,7 +367,7 @@ def main():
                     file_name= "Annaprasana list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('Home.jpeg',219))
+            st.image(resize_image('Home.jpeg',219,219))
             with st.expander('Gruha Pravesam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -399,7 +399,7 @@ def main():
                     file_name= "Gruha Pravesam list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('kid_shoveling.jpeg',272))
+            st.image(resize_image('kid_shoveling.jpeg',219,272))
             with st.expander('Bhu puja list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -433,7 +433,7 @@ def main():
                     file_name= "Bhu puja list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('satya.jpeg',154))
+            st.image(resize_image('satya.jpeg',219,154))
             with st.expander('Sri Satyanarayana Swami Vratam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -463,7 +463,7 @@ def main():
                     file_name= "Sri Satyanarayana Swami Vratam list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image("kalyna.jpeg",389))
+            st.image(resize_image("kalyna.jpeg",219,389))
             with st.expander('Kalyna Utsvam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
