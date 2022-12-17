@@ -252,7 +252,7 @@ def main():
                     file_name= "Hiranya sraddham list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image('shiva.jpeg',219,219))
+            st.image(resize_image('shiva.jpeg',215,215))
             with st.expander('Rudrabhishekam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
@@ -463,7 +463,7 @@ def main():
                     file_name= "Sri Satyanarayana Swami Vratam list.csv",
                     mime='text/csv'
                 )
-            st.image(resize_image("kalyna.jpeg",224,398))
+            st.image(resize_image("kalyna.jpeg",219,389))
             with st.expander('Kalyna Utsvam list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
