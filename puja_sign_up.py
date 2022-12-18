@@ -28,7 +28,7 @@ def message(to,name,puja,date,time,address,number,items):
         resp = requests.post('https://textbelt.com/text', {
             'phone': f'{to}',
             'message': f'Name: {name}\nPuja: {puja}\nDate: {date}\nTime: {time}\nAddress: {address}\nNumber: {number}\nItems: {items}',
-            'key': 'textbelt',
+            'key': '3cdf863f5c5f000d9deb5f15356d35c1cccc6b5fFFQRVEEzhiaMJOSNYcI4rqX2O',
         })
         print(resp.json())
 def worksheet_names():
