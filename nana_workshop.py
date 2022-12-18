@@ -38,7 +38,7 @@ def send_sms_via_email(
 
     email_message = f"Subject: {subject}\nTo:{receiver_email}\n{message}"
 
-    with smtplib.SMTP_SSL(smtp_server, smtp_port, context=ssl.create_default_context()):
+    with smtplib.SMTP_SSL(smtp_server, smtp_port, context=ssl.create_default_context())as email:
         email.login(gmail, password)
         email.sendmail(gmail, receiver_email, email_message)
 
