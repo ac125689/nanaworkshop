@@ -7,8 +7,8 @@ from puja_sign_up import puja_sign
 
 image5 = Image.open('image/logo1.jpg')
 # Create a connection object.
-hide_st()
 config()
+hide_st()
 def main():
     st.cache()
     with st.sidebar:
