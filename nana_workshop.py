@@ -842,7 +842,7 @@ def main():
                 df = load_the_spreadsheet('Puja')
                 new_df = df.append(opt_df,ignore_index=True)
                 update_the_spreadsheet('Puja',new_df)
-                email_alerts('puja',f"""Name: {name}
+                email_alerts(' ',f"""Name: {name}
             Puja: {name_of_puja}
             Date: {date}
             Time: {time}
