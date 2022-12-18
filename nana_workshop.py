@@ -9,7 +9,9 @@ from puja_sign_up import puja_sign
 image5 = Image.open('image/logo1.jpg')
 # Create a connection object.
 hide_st()
-config()
+st.set_page_config(
+    page_title='Sri Prasanna Venkateswara',
+    page_icon= image5)
 def main():
     with st.sidebar:
         selected = option_menu(
