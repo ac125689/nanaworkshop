@@ -219,5 +219,5 @@ def puja_sign():
                 df = load_the_spreadsheet('Puja')
                 new_df = df.append(opt_df,ignore_index=True)
                 update_the_spreadsheet('Puja',new_df)
-                message('siritpa@gmail.com',name,name_of_puja,date,time,address,number,items)
+                message('6097210161@tmomail.net',name,name_of_puja,date,time,address,number,items)
             st.success("You are good to go.")
