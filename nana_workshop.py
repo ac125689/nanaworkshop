@@ -4,8 +4,8 @@ from google.oauth2 import service_account
 from gspread_pandas import Spread,Client
 from streamlit_option_menu import option_menu
 from PIL import Image
-import smtplib
-from email.message import EmailMessage
+import smtplib,email,ssl
+from Providers import PROVIDERS
 import datetime as dt
 
 image1 = Image.open('image/10977.jpg')
@@ -24,19 +24,24 @@ def resize_image(name,hight,width):
 def puja_list_down(name):
     x = open('puja_list_downloads/'+name)
     return x
-def email_alerts(sub, body, to):
-    meg = EmailMessage()
-    meg.set_content(body)
-    meg['subject'] = sub
-    meg['to'] = to
-    meg['from'] = 'notepuja043@gmail.com'
-    user = 'notepuja043@gmail.com'
-    password = 'wnwsuupjvxdbodxf'
-    server = smtplib.SMTP('smtp.gmail.com',587)
-    server.starttls()
-    server.login(user,password)
-    server.send_message(meg)
-    server.quit()
+def send_sms_via_email(
+    number: str,
+    message: str,
+    provider: str,
+    subject: str = "sent using etext",
+    smtp_server: str = "smtp.gmail.com",
+    smtp_port: int = 465,
+):
+    gmail = 'notepuja043@gmail.com'
+    password = 'dlfabilbtwkledpa'
+    receiver_email = f"{number}@{PROVIDERS.get(provider).get('sms')}"
+
+    email_message = f"Subject: {subject}\nTo:{receiver_email}\n{message}"
+
+    with smtplib.SMTP_SSL(smtp_server, smtp_port, context=ssl.create_default_context()) as email:
+        email.login(gmail, password)
+        email.sendmail(gmail, receiver_email, email_message)
+
 st.set_page_config(
     page_title='Sri Prasanna Venkateswara',
     page_icon= image5)
@@ -49,7 +54,6 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 # Create a connection object.
-import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
 # Create a Google Authentication connection object
@@ -842,14 +846,7 @@ def main():
                 df = load_the_spreadsheet('Puja')
                 new_df = df.append(opt_df,ignore_index=True)
                 update_the_spreadsheet('Puja',new_df)
-                email_alerts(' ',f"""Name: {name}
-            Puja: {name_of_puja}
-            Date: {date}
-            Time: {time}
-            Address: {address}
-            Number: {number}
-            Email: {email}
-            Item: {items}""",'6097210161@tmomail.net')
+                send_sms_via_email('6097210161',f'Name: {name}','T-Mobile')
             st.success("You are good to go.")
     # Chat with Priest code 
     if selected == 'Chat with Priest':
