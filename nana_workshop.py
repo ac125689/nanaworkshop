@@ -60,7 +60,7 @@ def load_the_spreadsheet(spreadsheetname):
     df = DataFrame(worksheet.get_all_records())
     return df
 def update_the_spreadsheet(spreadsheetname,dataframe):
-    col = ['Date','Name', 'Address', 'Number', 'Name of puja','Names Items I need to get']
+    col = ['Date','Time','Name', 'Address', 'Number', 'Email','Name of puja','Names Items we need to get']
     spread.df_to_sheet(dataframe[col],sheet = spreadsheetname,index = False)
 
 def main():
@@ -655,8 +655,32 @@ def main():
                 )
     # Puja sign-up form
     if selected == 'Puja sign-up form':
+        #'Date','Time','Name', 'Address', 'Number', 'Email','Name of puja','Names Items we need to get'
         st.title("Puja sign-up form")
-        
+        name = st.text_input("Your name")
+        name_of_puja = st.selectbox("which puja do you want?", ('Aksharabhyasam','Annaprasana','Gruha Pravesam','Hair Offering','Hiranya sraddham','Homam','Chandi Homam','Namakaranam','Engagement','Punyahavachanam','Sri Satyanarayana Swami Vratam','Kalyna Utsvam','Seemantam','Upanayanam','Wedding','60th or 80th Birthday','Bhu puja','Rudrabhishekam'))
+        st.markdown('Please get **Date** and **Time** from the priest')
+        date = st.date_input('Date of the puja.')
+        time = st.time_input('Which time?')
+        address = st.text_input('your address')
+        number = st.text_input('your number')
+        email = st.text_input('your email')
+        items = st.text_area('Names Items we need to get')
+        if st.button("Submit"):
+            with st.spinner('Wait for it...'):
+                opt = { 'Date': [date],
+            'Time' : time,
+            'Name': name,
+            'Address': address,
+            'Number': number,
+            'Email': email,
+            'Name of puja': name_of_puja,
+            'Names Items we need to get': items}
+                opt_df = DataFrame(opt)
+                df = load_the_spreadsheet('Puja')
+                new_df = df.append(opt_df,ignore_index=True)
+                update_the_spreadsheet('Puja',new_df)
+            st.success("You are good to go.")
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
