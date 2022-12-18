@@ -1,9 +1,9 @@
 import streamlit as st
 from PIL import Image
 from streamlit_option_menu import option_menu
-from main.puja_list import puja_list
-from main.dont_mess import home,config,Chef,Priest,hide_st
-from main.puja_sign_up import puja_sign
+from puja_list import puja_list
+from dont_mess import home,config,Chef,Priest,hide_st
+from puja_sign_up import puja_sign
 
 image5 = Image.open('image/logo1.jpg')
 # Create a connection object.
