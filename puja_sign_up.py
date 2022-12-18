@@ -4,7 +4,8 @@ from puja_list import puja_list_down
 from google.oauth2 import service_account
 from gspread_pandas import Spread,Client
 import ssl
-import pywhatkit,datetime
+import pywhatkit
+import datetime
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
