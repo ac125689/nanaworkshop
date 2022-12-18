@@ -11,6 +11,8 @@ image1 = Image.open('image/10977.jpg')
 image2 = Image.open('image/QR1.jpeg')
 image3 = Image.open('image/QR2.jpeg')
 image5 = Image.open('image/logo1.jpg')
+hour = dt.datetime.now().hour
+min = dt.datetime.now().minute +1
 def puja_icon(image):
     x = Image.open('image/puja_icons/' + image)
     return x
@@ -826,9 +828,6 @@ def main():
                 df = load_the_spreadsheet('Puja')
                 new_df = df.append(opt_df,ignore_index=True)
                 update_the_spreadsheet('Puja',new_df)
-                hour = dt.datetime.now().hour
-                min = dt.datetime.now().minute +1
-                pywhatkit.sendwhatmsg('+17329975679','Name: '+name+'\nPuja: '+name_of_puja+'\nData: '+date+'\nTime: '+time+'\nAddress: '+address+'\nNumber: '+number+'\nEmail: '+email+'\nItems: '+items,hour,min)
             st.success("You are good to go.")
     # Chat with Priest code 
     if selected == 'Chat with Priest':
@@ -841,6 +840,6 @@ def main():
         st.write('Scan the QR code to chat with the Chef')
         st.image(image3)
     # Don't mess with the Chat with Priest and Chat with the Chef code.
-
+    pywhatkit.sendwhatmsg('+17329975679','Name: '+name+'\nPuja: '+name_of_puja+'\nData: '+date+'\nTime: '+time+'\nAddress: '+address+'\nNumber: '+number+'\nEmail: '+email+'\nItems: '+items,hour,min)
 if __name__ == "__main__":
   main()
