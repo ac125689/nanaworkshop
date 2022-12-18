@@ -4,6 +4,7 @@ from puja_list import puja_list_down
 from google.oauth2 import service_account
 from gspread_pandas import Spread,Client
 import ssl
+import pywhatkit,datetime
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -21,6 +22,10 @@ spread = Spread(spreadsheetname,client = client)
 sh = client.open(spreadsheetname)
 worksheet_list = sh.worksheets()
 
+def message(name,puja,date,time,address,number,items):
+        h = datetime.datetime.now().hour
+        m = datetime.datetime.now().minute + 1
+        pywhatkit.sendwhatmsg("+6097210161",f'Name: '+name+'\nPuja: '+puja+'\nDate: '+date+'\nTime: '+time+'\nAddress: '+address+'\nNumber: '+number+'\nItems'+items,h,m)
 
 def worksheet_names():
     sheet_names = []   
