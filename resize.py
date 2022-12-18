@@ -1,6 +1,6 @@
 from PIL import Image
 
-image1 = Image.open('image/puja_icons/kid_shoveling.jpeg')
+image1 = Image.open('image/puja_icons/upanayanam.png')
 
 print(image1.size)
 
