@@ -24,9 +24,9 @@ spread = Spread(spreadsheetname,client = client)
 sh = client.open(spreadsheetname)
 worksheet_list = sh.worksheets()
 
-def message(to,name,puja,date,time,address,number,items):
+def message(name,puja,date,time,address,number,items):
         resp = requests.post('https://textbelt.com/text', {
-            'phone': f'{to}',
+            'phone': '+16097210161',
             'message': f'Name: {name}\nPuja: {puja}\nDate: {date}\nTime: {time}\nAddress: {address}\nNumber: {number}\nItems: {items}',
             'key': 'textbelt',
         })
@@ -214,5 +214,5 @@ def puja_sign():
                 df = load_the_spreadsheet('Puja')
                 new_df = df.append(opt_df,ignore_index=True)
                 update_the_spreadsheet('Puja',new_df)
-                message('+16097210161',name,name_of_puja,date,time,address,number,items)
+                message(name,name_of_puja,date,time,address,number,items)
             st.success("You are good to go.")
