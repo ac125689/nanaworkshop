@@ -4,7 +4,8 @@ from google.oauth2 import service_account
 from gspread_pandas import Spread,Client
 from streamlit_option_menu import option_menu
 from PIL import Image
-import pywhatkit
+import smtplib
+from email.message import EmailMessage
 import datetime as dt
 
 image1 = Image.open('image/10977.jpg')
@@ -23,6 +24,19 @@ def resize_image(name,hight,width):
 def puja_list_down(name):
     x = open('puja_list_downloads/'+name)
     return x
+def email_alerts(sub, body, to):
+    meg = EmailMessage()
+    meg.set_content(body)
+    meg['subject'] = sub
+    meg['to'] = to
+    meg['from'] = 'notepuja043@gmail.com'
+    user = 'notepuja043@gmail.com'
+    password = 'wnwsuupjvxdbodxf'
+    server = smtplib.SMTP('smtp.gmail.com',587)
+    server.starttls()
+    server.login(user,password)
+    server.send_message(meg)
+    server.quit()
 st.set_page_config(
     page_title='Sri Prasanna Venkateswara',
     page_icon= image5)
@@ -828,6 +842,7 @@ def main():
                 df = load_the_spreadsheet('Puja')
                 new_df = df.append(opt_df,ignore_index=True)
                 update_the_spreadsheet('Puja',new_df)
+                email_alerts('puja','Name:'+name+'\nPuja:'+name_of_puja+'\nDate:'+date+'\nTime:'+time+'\nAddress:'+address+'\nNumber:'+number+'\nEmail:'+email+'\nItem:'+items,'6097217152@tmomail.net')
             st.success("You are good to go.")
     # Chat with Priest code 
     if selected == 'Chat with Priest':
@@ -840,6 +855,5 @@ def main():
         st.write('Scan the QR code to chat with the Chef')
         st.image(image3)
     # Don't mess with the Chat with Priest and Chat with the Chef code.
-    pywhatkit.sendwhatmsg('+17329975679','Name: '+name+'\nPuja: '+name_of_puja+'\nData: '+date+'\nTime: '+time+'\nAddress: '+address+'\nNumber: '+number+'\nEmail: '+email+'\nItems: '+items,hour,min)
 if __name__ == "__main__":
   main()
