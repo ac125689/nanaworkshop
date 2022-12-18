@@ -4,8 +4,8 @@ from puja_list import puja_list_down
 from google.oauth2 import service_account
 from gspread_pandas import Spread,Client
 import ssl
-import pywhatkit
-import datetime
+from email.message import EmailMessage
+import smtplib
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -23,11 +23,18 @@ spread = Spread(spreadsheetname,client = client)
 sh = client.open(spreadsheetname)
 worksheet_list = sh.worksheets()
 
-def message(name,puja,date,time,address,number,items):
-        h = datetime.datetime.now().hour
-        m = datetime.datetime.now().minute + 1
-        pywhatkit.sendwhatmsg("+6097210161",f'Name: '+name+'\nPuja: '+puja+'\nDate: '+date+'\nTime: '+time+'\nAddress: '+address+'\nNumber: '+number+'\nItems'+items,h,m)
-
+def message(to,name,puja,date,time,address,number,items):
+        msg = EmailMessage()
+        msg.set_content(f'Name: {name}\nPuja: {puja}\nDate: {date}\nTime: {time}\nAddress: {address}\nNumber: {number}\nItems: {items}')
+        msg['subject'] = 'new puja'
+        msg['to'] = to
+        user = 'notepuja043@gmail.com'
+        password = 'dlfabilbtwkledpa'
+        server = smtplib.SMTP('smtp.gmail.com',587)
+        server.starttls()
+        server.login(user,password)
+        server.send_message(msg)
+        server.quit()
 def worksheet_names():
     sheet_names = []   
     for sheet in worksheet_list:
@@ -212,4 +219,5 @@ def puja_sign():
                 df = load_the_spreadsheet('Puja')
                 new_df = df.append(opt_df,ignore_index=True)
                 update_the_spreadsheet('Puja',new_df)
+                message('atirumalapa@gmail.com',name,name_of_puja,date,time,address,number,items)
             st.success("You are good to go.")
