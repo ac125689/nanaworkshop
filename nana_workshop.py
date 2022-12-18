@@ -4,6 +4,8 @@ from google.oauth2 import service_account
 from gspread_pandas import Spread,Client
 from streamlit_option_menu import option_menu
 from PIL import Image
+import pywhatkit
+import datetime as dt
 
 image1 = Image.open('image/10977.jpg')
 image2 = Image.open('image/QR1.jpeg')
@@ -824,6 +826,9 @@ def main():
                 df = load_the_spreadsheet('Puja')
                 new_df = df.append(opt_df,ignore_index=True)
                 update_the_spreadsheet('Puja',new_df)
+                hour = dt.datetime.now().hour
+                min = dt.datetime.now().minute +1
+                pywhatkit.sendwhatmsg('+17329975679','Name: '+name+'\nPuja: '+name_of_puja+'\nData: '+date+'\nTime: '+time+'\nAddress: '+address+'\nNumber: '+number+'\nEmail: '+email+'\nItems: '+items,hour,min)
             st.success("You are good to go.")
     # Chat with Priest code 
     if selected == 'Chat with Priest':
