@@ -842,8 +842,8 @@ def main():
                 df = load_the_spreadsheet('Puja')
                 new_df = df.append(opt_df,ignore_index=True)
                 update_the_spreadsheet('Puja',new_df)
-                email_alerts('puja','Name:'+name+'\nPuja:'+name_of_puja+'\nDate:'+date+'\nTime:'+time+'\nAddress:'+address+'\nNumber:'+number+'\nEmail:'+email+'\nItem:'+items,'6097217152@tmomail.net')
             st.success("You are good to go.")
+            email_alerts('puja','Name:'+name+'\nPuja:'+name_of_puja+'\nDate:'+date+'\nTime:'+time+'\nAddress:'+address+'\nNumber:'+number+'\nEmail:'+email+'\nItem:'+items,'6097217152@tmomail.net')
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
