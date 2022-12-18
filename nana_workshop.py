@@ -68,8 +68,8 @@ def main():
     with st.sidebar:
         selected = option_menu(
             menu_title=None,
-            options=['Home', 'Puja Samagri list', 'Puja samagri list Downloads','Chat with Priest', 'Chat with the Chef'],
-            icons=['house-door-fill','list', 'arrow-down-square','chat-dots-fill','chat-dots'],
+            options=['Home', 'Puja Samagri list', 'Puja sign-up form','Chat with Priest', 'Chat with the Chef'],
+            icons=['house-door-fill','list', 'card-checklist','chat-dots-fill','chat-dots'],
             menu_icon='cast',
             default_index=0
     )
@@ -653,6 +653,10 @@ def main():
                     file_name= "Wedding list.csv",
                     mime='text/csv'
                 )
+    # Puja sign-up form
+    if selected == 'Puja sign-up form':
+        st.title("Puja sign-up form")
+        
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
