@@ -659,9 +659,153 @@ def main():
         st.title("Puja sign-up form")
         name = st.text_input("Your name")
         name_of_puja = st.selectbox("which puja do you want?", ('Aksharabhyasam','Annaprasana','Gruha Pravesam','Hair Offering','Hiranya sraddham','Homam','Chandi Homam','Namakaranam','Engagement','Punyahavachanam','Sri Satyanarayana Swami Vratam','Kalyna Utsvam','Seemantam','Upanayanam','Wedding','60th or 80th Birthday','Bhu puja','Rudrabhishekam'))
+        if name_of_puja == 'Aksharabhyasam':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Aksharabhyasam list",
+                    data=puja_list_down('Aksharabhyasam_list.csv'),
+                    file_name= "Aksharabhyasam list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Annaprasana':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Annaprasana list",
+                    data=puja_list_down('Annaprasana list.csv'),
+                    file_name= "Annaprasana list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Gruha Pravesam':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Gruha Pravesam list",
+                    data=puja_list_down('Gruha Pravesam list.csv'),
+                    file_name= "Gruha Pravesam list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Hair Offering':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Hair Offering list",
+                    data=puja_list_down('Hair Offering list.csv'),
+                    file_name= "Hair Offering list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Hiranya sraddham':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Hiranya sraddham list",
+                    data=puja_list_down('Hiranya sraddham list.csv'),
+                    file_name= "Hiranya sraddham list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Homam':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Homam list",
+                    data=puja_list_down('Homam list.csv'),
+                    file_name= "Homam list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Chandi Homam':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Chandi Homam list",
+                    data=puja_list_down('Chandi Homam list.csv'),
+                    file_name= "Chandi Homam list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Namakaranam':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Namakaranam list",
+                    data=puja_list_down('Namakaranam list.csv'),
+                    file_name= "Namakaranam list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Engagement':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Engagement list",
+                    data=puja_list_down('Engagement list.csv'),
+                    file_name= "Engagement list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Punyahavachanam':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Punyahavachanam list",
+                    data=puja_list_down('Punyahavachanam list.csv'),
+                    file_name= "Punyahavachanam list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Sri Satyanarayana Swami Vratam':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Sri Satyanarayana Swami Vratam list",
+                    data=puja_list_down('Sri Satyanarayana Swami Vratam list.csv'),
+                    file_name= "Sri Satyanarayana Swami Vratam list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Kalyna Utsvam':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Kalyna Utsvam list",
+                    data=puja_list_down('Kalyna Utsvam list.csv'),
+                    file_name= "Kalyna Utsvam list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Seemantam':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Seemantam list",
+                    data=puja_list_down('Seemantam list.csv'),
+                    file_name= "Seemantam list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Upanayanam':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Upanayanam list",
+                    data=puja_list_down('Upanayanam list.csv'),
+                    file_name= "Upanayanam list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Wedding':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Wedding list",
+                    data=puja_list_down('Wedding list.csv'),
+                    file_name= "Wedding list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == '60th or 80th Birthday':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download 60th or 80th Birthday list",
+                    data=puja_list_down('60th or 80th Birthday list.csv'),
+                    file_name= "60th or 80th Birthday list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Bhu puja':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Bhu puja list",
+                    data=puja_list_down('Bhu puja list.csv'),
+                    file_name= "Bhu puja list.csv",
+                    mime='text/csv'
+                )
+        if name_of_puja == 'Rudrabhishekam':
+            st.info("The cost priest service will be ")
+            st.download_button(
+                    label="Download Rudrabhishekam list",
+                    data=puja_list_down('Rudrabhishekam list.csv'),
+                    file_name= "Rudrabhishekam list.csv",
+                    mime='text/csv'
+                )
         st.markdown('Please get **Date** and **Time** from the priest')
         date = st.date_input('Date of the puja.')
-        time = st.time_input('Which time?')
+        time = st.time_input('Which time? The time is in 24 hour. Example 1pm will be 13')
         address = st.text_input('your address')
         number = st.text_input('your number')
         email = st.text_input('your email')
