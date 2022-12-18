@@ -703,8 +703,8 @@ def main():
             st.info("The cost priest service will be ")
             st.download_button(
                     label="Download Homam list",
-                    data=puja_list_down('Homam list.csv'),
-                    file_name= "Homam list.csv",
+                    data=puja_list_down('Regular Homam list.csv'),
+                    file_name= "Regular Homam list.csv",
                     mime='text/csv'
                 )
         if name_of_puja == 'Chandi Homam':
