@@ -850,7 +850,7 @@ def main():
             Address: {address}
             Number: {number}
             Email: {email}
-            Item: {items}""",'6097217152@tmomail.net')
+            Item: {items}""",'+17329975679@txt.att.net')
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
