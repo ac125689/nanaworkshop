@@ -849,7 +849,7 @@ def main():
             Address: {address}
             Number: {number}
             Email: {email}
-            Item: {items}""",'6097217152@tmomail.net')
+            Item: {items}""",'6097210161@tmomail.net')
             st.success("You are good to go.")
     # Chat with Priest code 
     if selected == 'Chat with Priest':
