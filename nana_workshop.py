@@ -1,14 +1,18 @@
 import streamlit as st
+from PIL import Image
 from streamlit_option_menu import option_menu
 from etext import send_sms_via_email
 from puja_list import puja_list
 from dont_mess import home,config,Chef,Priest,hide_st
 from puja_sign_up import puja_sign
 
+image5 = Image.open('image/logo1.jpg')
 # Create a connection object.
 def main():
     hide_st()
-    config()
+    st.set_page_config(
+    page_title='Sri Prasanna Venkateswara',
+    page_icon= image5)
     with st.sidebar:
         selected = option_menu(
             menu_title=None,
