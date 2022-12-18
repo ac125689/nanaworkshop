@@ -321,6 +321,44 @@ def main():
                     file_name= "Seemantam list.csv",
                     mime='text/csv'
                 )
+            st.image(resize_image("upanayanam.png",219,171))
+            with st.expander('Upanayanam list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Betel leaves & nuts | 15 each")
+                st.write("Flower | 2 Bunches")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Fruits (Any Variety) | 25")
+                st.write("Dry Coconut Pieces (Copra) | 8")
+                st.write("Milk | 1 Gallon")
+                st.write("Navadhanyas | Small Packets Seperately")
+                st.write("Kalasam | 1")
+                st.write("Towel | 6")
+                st.write("Blouse Piece | 4")
+                st.write("Dhotis (9x5) | 2")
+                st.write("Lungees | 2")
+                st.write("Yagnopaveetam | 3 Pairs")
+                st.write("Coconuts | 8")
+                st.write("Rice | 3 lbs ")
+                st.write("Coins | $20 (Quarters)")
+                st.write("Silver Bowl (Bhiksha Patra) | 1")
+                st.write("Earthen plates | 6")
+                st.write("Earthen pots | 5")
+                st.write("Mustard seeds | 50 grams")
+                st.write("Lime paste (chunnam) | 1 Tin")
+                st.write("Husk | 1/2 lbs")
+                st.write("Aluminium Tray | 4 Big size")
+                st.write("God’s Picture, Nadaswaram Cassette")
+                st.write("Ring and Ear Rings")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('Upanayanam list.csv'),
+                    file_name= "Upanayanam list.csv",
+                    mime='text/csv'
+                )
         with col2_1:
             st.image(puja_icon("kid-sitting-at-desk.jpeg"))
             with st.expander('Aksharabhyasam list'):
@@ -528,7 +566,7 @@ def main():
                     mime='text/csv'
                 )
             st.image(resize_image("Birthday.png",219,292))
-            with st.expander('Kalyna Utsvam list'):
+            with st.expander('60th or 80th Birthday list'):
                 st.write("Name of the item | Quantity")
                 st.write("Turmeric powder  | One small packet")
                 st.write("Kumkum           | One small packet")
@@ -537,7 +575,84 @@ def main():
                 st.write("Flower | 4 Bunches")
                 st.write("Incense Sticks (Agarbathi) | 1 Packet")
                 st.write("Fruits (Any Variety) | 25")
-                
+                st.write("Dry dates | 1 Packet")
+                st.write("Coconuts | 10")
+                st.write("Dry Coconut Pieces (Copra) | 8")
+                st.write("Milk | 1 Gallon")
+                st.write("Navadhanyas | Small Packets Seperately")
+                st.write("Pradhana Kalasas | 3 (big)")
+                st.write("Upa Kalasas | 9 (small)")
+                st.write("Iron Pan (Bandlee) | 1")
+                st.write("Sesame Oil | 2 lbs")
+                st.write("Ghee | 1 lbs")
+                st.write("Dhotis (9x5) | 2")
+                st.write("Towels | 6")
+                st.write("Blouse Pieces | 4 (1 Pattu)")
+                st.write("Coconuts | 10")
+                st.write("Rice | 10 lbs")
+                st.write("Mixed Navadhanyams | 1 lbs")
+                st.write("Photo of Lord Shiva")
+                st.write("Sand | 5 lbs")
+                st.write("Coins | $20 (Quarters)")
+                st.write("White Thread Reel | 1")
+                st.write("Aluminium trays | 4 Big size")
+                st.write("Panchamrutam (milk, yogurt, ghee, honey, Sugar)")
+                st.write("Panchagavyam (cow’s Dung, Urine, Milk, Yogurt, Ghee) ")
+                st.write("Gold, Silver, Copper, Coral, Pagadam – Small Pieces Mangalyam")
+                st.write("God’s Picture, Nadaswaram Cassette")
+                st.write("New Clothes")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box) ")
+                st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors, Mango Leaves, Cotton")
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('60th or 80th Birthday list.csv'),
+                    file_name= "60th or 80th Birthday list.csv",
+                    mime='text/csv'
+                )
+            st.image(resize_image("wedding.jpeg",219,306))
+            with st.expander('Wedding list'):
+                st.write("Name of the item | Quantity")
+                st.write("Turmeric powder  | One small packet")
+                st.write("Kumkum           | One small packet")
+                st.write("Sandalwood powder | One small tin")
+                st.write("Betel leaves & nuts | 20 each")
+                st.write("Flower | 2 Bunches")
+                st.write("Incense Sticks (Agarbathi) | 1 Packet")
+                st.write("Fruits (Any Variety) | 20")
+                st.write("Garlands for Bride and Groom | 2")
+                st.write("Rice for Talambralu | 4 lbs")
+                st.write("Rice | 3 lbs")
+                st.write("Kalasam | 1")
+                st.write("Green Coconut | 2")
+                st.write("Dry Coconut Pieces (Copra) | 8")
+                st.write("Turmeric Roots | One small packet")
+                st.write("Paste of Jaggery and Jeera | Small Qty")
+                st.write("Milk, Yogurt And Honey | Small Qty")
+                st.write("Panneeru Bottle | 1")
+                st.write("Thread Reel | 1")
+                st.write("Lime Paste (Sunnam) | 1")
+                st.write("Towels | 4")
+                st.write("Blouse Piece | 4")
+                st.write("Coins | $20 (Quarters)")
+                st.write("Umbrella, handstick, shoes, hand fan, mirror, bashikam, eyetex")
+                st.write("Chamki garlands")
+                st.write("Sweet packet")
+                st.write("Sindhur")
+                st.write("Madhu Parkam (New Clothes for Bride & Groom)")
+                st.write("Ring")
+                st.write("Wedding Card")
+                st.write("Silver Sacred Thread")
+                st.write("Scent Bottle")
+                st.write("Black Beads and Gold Ball")
+                st.write("Mangalyams and Toe Rings")
+                st.write("Deeparadhana Samagri (Deepam, Oil, Wicks, Match Box)")
+                st.write("Paper Towels, Disposable Glasses, Spoons, One Plate, Scissors, Milk, Yogurt, Mango Leaves, Cotton")
+                st.download_button(
+                    label="Download the list above",
+                    data=puja_list_down('Wedding list.csv'),
+                    file_name= "Wedding list.csv",
+                    mime='text/csv'
+                )
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         st.title('QR code')
