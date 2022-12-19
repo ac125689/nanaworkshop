@@ -4,7 +4,6 @@ from puja_list import puja_list_down
 from google.oauth2 import service_account
 from gspread_pandas import Spread,Client
 import ssl
-import requests
 from email.message import EmailMessage
 import smtplib
 
