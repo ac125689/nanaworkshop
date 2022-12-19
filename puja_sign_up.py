@@ -24,12 +24,18 @@ spread = Spread(spreadsheetname,client = client)
 sh = client.open(spreadsheetname)
 worksheet_list = sh.worksheets()
 
-def message(name,puja,date,time,address,number,items):
-        resp = requests.post('https://textbelt.com/text', {
-            'phone': '+16097210161',
-            'message': f'Name: {name}\nPuja: {puja}\nDate: {date}\nTime: {time}\nAddress: {address}\nNumber: {number}\nItems: {items}',
-            'key': 'textbelt',
-        })
+def message(to,name,puja,date,time,address,number,items):
+        msg = EmailMessage()
+        msg.set_content(f'Name: {name}\nPuja: {puja}\nDate: {date}\nTime: {time}\nAddress: {address}\nNumber: {number}\nItems: {items}')
+        msg['subject'] = 'new puja'
+        msg['to'] = to
+        user = 'notepuja043@gmail.com'
+        password = 'dlfabilbtwkledpa'
+        server = smtplib.SMTP('smtp.gmail.com',587)
+        server.starttls()
+        server.login(user,password)
+        server.send_message(msg)
+        server.quit()
 def worksheet_names():
     sheet_names = []   
     for sheet in worksheet_list:
@@ -214,5 +220,5 @@ def puja_sign():
                 df = load_the_spreadsheet('Puja')
                 new_df = df.append(opt_df,ignore_index=True)
                 update_the_spreadsheet('Puja',new_df)
-                message(name,name_of_puja,date,time,address,number,items)
+                message('atirumalapa@gmail.com',name,name_of_puja,date,time,address,number,items)
             st.success("You are good to go.")
