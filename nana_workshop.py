@@ -29,9 +29,11 @@ def main():
     # Puja Samagri list code
     if selected == 'Puja Samagri list':
         puja_list()
+        B_T_P_botton()
     # Puja sign-up form
     if selected == 'Puja sign-up form':
         puja_sign()
+        B_T_P_botton()
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         Priest()
