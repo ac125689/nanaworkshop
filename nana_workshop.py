@@ -8,8 +8,8 @@ config()
 hide_st()
 def B_T_P_botton():
     BC = """
-    <stlye>.gotop{
-    position: fixed;
+    <stlye>
+    a {position: fixed;
     width: 50px;
     height: 50px;
     background: red;
@@ -18,10 +18,9 @@ def B_T_P_botton():
     text-decoration: none;
     text-align: center;
     line-height: 50px;
-    color: white;
-}</style>
+    color: white;}</style>
     <link rel="stylesheet" href = "https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-    <a class = "gotop" href = "#"><i class= "fas fa-arrow-up"></i></a>
+    <a href = "#"><i class= "fas fa-arrow-up"></i></a>
     """
     st.markdown(BC,unsafe_allow_html=True)
 def main():
