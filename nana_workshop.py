@@ -6,6 +6,12 @@ from puja_sign_up import puja_sign
 
 config()
 hide_st()
+def B_T_P_botton():
+    BC = """
+    <link rel="stylesheet" href = "https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <a style = "position: fixed;width: 50px;height: 50px;background: red;bottom: 50px;right: 50px;text-decoration: none;text-align: center;line-height: 50px;color: white;"href = "#"><i class= "fas fa-arrow-up"></i></a>
+    """
+    st.markdown(BC,unsafe_allow_html=True)
 def main():
     st.cache()
     with st.sidebar:
@@ -22,10 +28,11 @@ def main():
     # Puja Samagri list code
     if selected == 'Puja Samagri list':
         puja_list()
-        st.button('arrow-up','https://sri-prasanna-venkateswara-priest-and-food-services.streamlit.app/#home','Top',20)
+        B_T_P_botton()
     # Puja sign-up form
     if selected == 'Puja sign-up form':
         puja_sign()
+        B_T_P_botton()
     # Chat with Priest code 
     if selected == 'Chat with Priest':
         Priest()
