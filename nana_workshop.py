@@ -9,7 +9,7 @@ hide_st()
 def B_T_P_botton():
     BC = """
     <link rel="stylesheet" href = "https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-    <button style = "position: fixed;width: 50px;height: 50px;background: red;bottom: 50px;right: 50px;text-decoration: none;text-align: center;line-height: 50px;color: white;"href = "#"><i class= "fas fa-arrow-up"></i></button>
+    <button style = "position: fixed;width: 50px;height: 50px;background: red;bottom: 50px;right: 50px;text-decoration: none;text-align: center;line-height: 50px;color: white; border: none;box-shadow: 0 0 10px rgb(0,0,0,0.25);border-radius: 50%;outline: none;cursor: pointer;"href = "#"><i class= "fas fa-arrow-up"></i></button>
     """
     st.markdown(BC,unsafe_allow_html=True)
 def main():
