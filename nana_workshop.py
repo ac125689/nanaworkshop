@@ -12,7 +12,7 @@ def B_T_P_botton():
     <link rel="stylesheet" href = "https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <a class = "gotop" href = "#"><i class= "fas fa-arrow-up"></i></a>
     """
-    st.markdown(BC,unsafe_allow_html=True)
+    st.markdown(BC)
 def main():
     st.cache()
     with st.sidebar:
