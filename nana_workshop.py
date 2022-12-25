@@ -6,6 +6,13 @@ from puja_sign_up import puja_sign
 
 config()
 hide_st()
+def B_T_P_botton():
+    BC = """
+    <link rel="stylesheet" href ="style.css">
+    <link rel="stylesheet" href = "https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <a class = "gotop" href = "#"><i class= "fas fa-arrow-up"></i></a>
+    """
+    st.markdown(BC,unsafe_allow_html=True)
 def main():
     st.cache()
     with st.sidebar:
