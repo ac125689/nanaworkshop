@@ -8,19 +8,8 @@ config()
 hide_st()
 def B_T_P_botton():
     BC = """
-    <stlye>
-    a {position: fixed;
-    width: 50px;
-    height: 50px;
-    background: red;
-    bottom: 40px;
-    right: 50px;
-    text-decoration: none;
-    text-align: center;
-    line-height: 50px;
-    color: white;}</style>
     <link rel="stylesheet" href = "https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-    <a href = "#"><i class= "fas fa-arrow-up"></i></a>
+    <a style = "position: fixed;width: 50px;height: 50px;background: red;bottom: 40px;right: 50px;text-decoration: none;text-align: center;line-height: 50px;color: white;"href = "#"><i class= "fas fa-arrow-up"></i></a>
     """
     st.markdown(BC,unsafe_allow_html=True)
 def main():
