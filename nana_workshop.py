@@ -8,7 +8,18 @@ config()
 hide_st()
 def B_T_P_botton():
     BC = """
-    <link rel="stylesheet" href ="style.css">
+    <stlye>.gotop{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: red;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}</style>
     <link rel="stylesheet" href = "https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <a class = "gotop" href = "#"><i class= "fas fa-arrow-up"></i></a>
     """
