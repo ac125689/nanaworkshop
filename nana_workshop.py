@@ -43,7 +43,7 @@ def main():
     if selected == 'Puja Samagri list':
         puja_list()
         B_T_P_botton()
-        st.button('Top',on_click=btn())
+        st.button('Top',on_click='https://sri-prasanna-venkateswara-priest-and-food-services.streamlit.app/#home')
     # Puja sign-up form
     if selected == 'Puja sign-up form':
         puja_sign()
