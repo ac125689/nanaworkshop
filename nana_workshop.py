@@ -12,6 +12,20 @@ def B_T_P_botton():
     file = codecs.open('btn.html','r')
     page = file.read()
     stc.html(page,scrolling=False)
+def btn():
+    bt ="""
+    <script>
+            const btnTTf = document.querySelector("#btnTT");
+            btnTTf.addEventListener("click", function(){
+            //window.scrollTo(0,0);
+            window.scrollTo({
+                top:0,
+                left:0,
+                behavior:"smooth"
+            });
+            });
+    </script>
+    """
 def main():
     st.cache()
     with st.sidebar:
@@ -29,6 +43,7 @@ def main():
     if selected == 'Puja Samagri list':
         puja_list()
         B_T_P_botton()
+        st.button('Top',on_click=btn())
     # Puja sign-up form
     if selected == 'Puja sign-up form':
         puja_sign()
